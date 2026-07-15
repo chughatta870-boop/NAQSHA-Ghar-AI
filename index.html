@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="description" content="AI House Plan Generator - 2.5 مرلہ سے 20 مرلہ تک کا آٹو ہاؤس نقشہ۔ لمبائی چوڑائی ڈالیں اور 1 منٹ میں پروفیشنل نقشہ بنائیں">
+<meta name="theme-color" content="#1B5E20">
+<meta name="application-name" content="NAQSHA Ghar AI">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="NAQSHA AI">
+<meta name="keywords" content="naqsha, house plan, نقشہ, مرلہ, گھر کا نقشہ, auto house plan pakistan">
+<title>NAQSHA Ghar AI - آٹو ہاؤس نقشہ جنریٹر</title>
+
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="./icon-512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="header">
+  <h1>🏠 NAQSHA Ghar AI</h1>
+  <p>AI سے 2.5 سے 20 مرلہ تک کا پروفیشنل نقشہ 1 منٹ میں</p>
+</header>
+
+<main class="container">
+  <div class="form-card">
+    <h2>نقشے کی تفصیلات</h2>
+
+    <label for="marla">کل رقبہ: مرلہ میں</label>
+    <input type="number" id="marla" placeholder="مثال: 5" min="2.5" max="20" step="0.5" required>
+
+    <label>لمبائی x چوڑائی: فٹ میں</label>
+    <div class="row">
+      <input type="number" id="length" placeholder="لمبائی فٹ" min="20" required>
+      <input type="number" id="width" placeholder="چوڑائی فٹ" min="20" required>
+    </div>
+
+    <label for="stories">منزل کی تعداد</label>
+    <select id="stories">
+      <option value="1">Single Story - سنگل منزل</option>
+      <option value="2">Double Story - ڈبل منزل</option>
+      <option value="3">Triple Story - ٹرپل منزل</option>
+    </select>
+
+    <label class="checkbox-label">
+      <input type="checkbox" id="attachBath" checked>
+      اٹیچ باتھ روم شامل کریں
+    </label>
+
+    <button id="generateBtn">🤖 AI نقشہ بنائیں</button>
+  </div>
+
+  <div class="plan-card">
+    <h2>آپ کا Auto NAQSHA</h2>
+    <canvas id="planCanvas" width="600" height="800"></canvas>
+
+    <!-- 3 BUTTONS -->
+    <div class="btn-group">
+      <button id="downloadBtn">📥 PNG ڈاؤنلوڈ</button>
+      <button id="shareBtn">📤 شیئر کریں</button>
+      <button id="saveBtn">💾 گیلری میں Save</button>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <button id="installBtn" style="display:none;">📲 App انسٹال کریں</button>
+  <p><b>نوٹ:</b> یہ نقشہ ابتدائی آئیڈیا کے لیے ہے۔ تعمیر سے پہلے مستند آرکیٹیکٹ سے لازمی چیک کروائیں</p>
+  <p>Developed by: <b>M Ijaz</b> © 2026</p>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
